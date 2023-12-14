@@ -20,7 +20,7 @@ import java.util.Map;
 public class TestCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String s, @NotNull String[] strings) {
-        DiscordWebhook.sendWebhook("https://discord.com/api/webhooks/1177908718524973116/-IQ9x1j3C6g3KXpUNSeEnLytm9PW6zU5qxeY7Z5z-eJas7Ecy5Y7mMiJrTw2nwh8tD2D", "Test");
+        DiscordWebhook.sendWebhook("[secret]", "Test");
         return false;
     }
 

@@ -8,7 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-public class MSG_Command implements CommandExecutor {
+public class Msg_Command implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String label, @NotNull String[] args) {
         if(!utils.senderInstanceCheck(sender, "Du must ein §aspieler§7 sein!")){return false;}

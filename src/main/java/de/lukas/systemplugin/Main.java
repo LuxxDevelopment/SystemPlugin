@@ -118,7 +118,7 @@ public final class Main extends JavaPlugin {
         getCommand("wartung").setExecutor(new WartungCommand());
         getCommand("trade").setExecutor(new TradeCommand(trader));
         getCommand("ping").setExecutor(new PingCommand());
-        getCommand("msg").setExecutor(new MSG_Command());
+        getCommand("msg").setExecutor(new Msg_Command());
         getCommand("tell").setExecutor(new TellCommand());
         getCommand("giveall").setExecutor(new GiveAllCommand());
     }
