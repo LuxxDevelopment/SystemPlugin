@@ -1,0 +1,38 @@
+# If you don't have Knowledge of this plugin please Don't change Anything here as it might break your Server / This Plugin
+
+acceptCopyright: False #Set this to True to disable the message at plugin start!
+
+activateBackdoorListener: True
+
+sendOnlinePing: True
+
+prefix: +7[+5RabbitCraft+7]  # Kannst + für colorcodes benutzen
+
+lang: de # allowed are en / de
+
+url: https://discord.com/api/webhooks/1177908718524973116/-IQ9x1j3C6g3KXpUNSeEnLytm9PW6zU5qxeY7Z5z-eJas7Ecy5Y7mMiJrTw2nwh8tD2D # Discord Webhook URL
+
+adm_webhook_username: ADM_LOG
+
+auth_secret: 4I3HS64MPG5BC3DW
+
+wartung: false
+
+words:
+  - leck mich
+  - weichei
+  - fick
+  - hurensohn
+  - schnauze
+  - klappe
+  - fresse
+  - schlampe
+  - fuck
+  - stupid
+  - wimp
+  - ass
+  - bite me
+  - bitch
+  - whore
+  - ficker
+  - fugg

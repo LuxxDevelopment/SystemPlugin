@@ -1,0 +1,148 @@
+MINECRAFT:
+
+Plugin (RCS):
+
+Info:
+	- Prefix: §7[§5RabbitCraft§7]	| Defined in config.yml
+	- Discord Command Log			| When enabeld logs every admin commands (NOT MESSAGES)
+
+Commands:
+	- /inv or /inventory	  | A simple test command that opens a simple Managment Console !! REMOVED
+	- /kick and /kickall	  | Kicks a player or every player with a  optional reason
+	- /ban 					  | Ban a player for a reason
+	- /op and /deop			  | Set ingame operator (Please use a Permissions management system like luckperms)
+	- /time					  | Set time command aliases are /day; /night; /noon; /midnight
+	- /reload /rl 			  | Rewamped reload conmmand with prefix (does not need "confirm")
+	- /heal and /healall 	  | Heals a specific player and or all
+	- /feed and /feedall	  | Set the hunger of you and or all players to full
+	- /fly					  | Enabels fly mode for the Target
+	- /gamemode				  | Rewamped gamemode or /gm command
+	- /ban					  | Ban a player
+	- /weather 				  | A weather command (clear; rain; thunder)
+	- /vanish 				  | Hides you from other players
+	- /spawn				  | Teleports you or the target player to the world spawn
+	- /regeln oder /rules	  | Shows A list of server rules (Weißt auf DC hin)
+	- /setspawn	 			  | Sets the current location to be the servers spawn
+	- /freeze			  	  | Freeze a player (No movement)
+	- /pl					  | Hides /pl command for players that don't have necessery permissions
+	- /stop	 				  | Rewamp of the /stop command
+	- /rename			  	  | Allows you to rename your or someone elses Item
+	- /repair			  	  | Allows you to repair your or someoneelses tools / items
+	- /trade				  | Lets you trade with other people args: /trade (request/accept) <playername>
+
+Listeners:
+	- Join Message			  | Set the join message
+	- Leave Message			  | Set the leave message
+	- Scoreboard			  | A simple score board currently hard coded !!
+	- Server Motd			  | Just a motd for the Minecraft server list
+	- Bad Words Filter		  | A Simple bad words filter that has to be configured
+
+Admin Listeners:
+	- op					  | A simple op command were you can only set your own mode Requires an otp code
+	- give					  | Give command not as a normal command
+	- enchant				  | Enchant command without an Enchant ment cap (Max Level is 255)
+
+TODO:
+    - /ping <playername>      | Get the ping of you or a specific player
+	- /ah					  | Opens the Auctionhouse when a specific level is reached
+	- /lobby				  | Teleports the player Onto the lobby server
+	- chestlock System		  | Locks chests when a sign with a specific text is placed on it
+	- /serverpanel			  | Shows a link to a server management Website (more details at categroy)
+	- Tablist				  | Edit the standart Tablist to something more cool
+	- /summon [mob]			  | Summon a mob
+	- /give [item] [count]	  | Gives the player or a target a specific item
+	- /kit					  | Shows the player a menu (Inventory) to chose a kit
+	- /createkit			  | Shows the player a menu (Inventory) to create a kit
+	- /renamekit			  | Shows the player a menu (Inventory) to rename a kit
+	- /msg or /r 			  | Private messages (disable /tell)
+	- /tp and /rtp		  	  | Rewamp of /tp command and adds /rtp (random teleport)
+	- /wild 			 	  | Teleports the player or target into the wilderness (smp)
+	- /chunkclaim		 	  | Allows a player to claim a chuck (Others unless trusted cant build break or open chests)
+	- /clan or /town 	  	  | Makes it possible to create clans / towns witch are groups of players that can combine their chunks
+	- Serverresourcepack  	  | A resource pack that makes actual coins exists
+	- NBT Changer		  	  | Lets you change the metadata of any item
+	- Customenchants	  	  | Adds a vority of new enchants
+	- /enchant			  	  | With a high entchantment cap of 255
+	- Permission System		  | A complete permissions system
+	- /wartung or /maintanence| Locks down the server and changes the motd
+	- /report  				  | Simple report command /report (list/create/delete) [playeranme] [reason]
+	- /home und /sethome	  | Allows a player to set a home point and teleport to it (MAX = 3)
+	- /pay                    | Well lets you pay other player  (Even offline ones)
+	- add money               | Add an indikator to the scoreboard
+	- /clearchat			  | Lets you clear you or anyotherplayers chat (Also works for everyone)
+	- Command optimises       | Make most of the commands relay on a utils class so everything is need and tidy xD
+
+Issues:
+    - Trade system            | does not cancel on INV Close
+
+Serverpanel:
+	Feautures:
+		- Console
+		- Plugins Reload Button
+		- Restart / Reboot Button
+		- Give Permissions
+		- Kick a player with reason
+		- Ban a player with reason
+
+Permissions:
+	- system.staff.bypass.
+		- plhide
+		- chestlock
+		- wartung
+		- kill
+		- freeze
+		- kick
+		- badwordfilter
+	- system.staff.run
+		- server.stop
+		- wartung
+		- pl
+		- repair
+		- give
+		- enchant.normal
+		- enchant.all
+		- rename.self
+		- rename.other
+		- repair.self
+		- repair.other
+		- freeze.self
+		- freeze.other
+		- heal.self
+		- heal.all
+		- feed.self
+		- feed.all
+		- kit.rename
+		- kit.create
+		- kit.delete
+		- restart
+		- stop
+		- reload
+		- summon
+		- weather
+		- gamemode.self
+		- gamemode.other
+		- kick.one
+		- kick.all
+		- teleport.self
+		- teleport.other
+		- op.set
+		- setspawn
+		- report.list
+		- report.delete
+		- vanish.self
+		- vanish.other
+		- ping.other
+	- system.player.run
+		- chunkclaim
+		- clan
+		- town
+		- wild
+		- chestlock
+		- spawn
+		- lobby
+		- report.create
+		- home.create
+		- home.delete
+		- home.rename
+		- home.teleport
+		- ping.self

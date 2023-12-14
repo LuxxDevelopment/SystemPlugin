@@ -1,0 +1,83 @@
+name: RC
+version: '${project.version}'
+main: de.lukas.systemplugin.Main
+api-version: 1.19
+commands:
+  msg:
+    description: Lets you Privatly message a player
+  ping:
+    description: Lets you easliy check someone elses ping
+  trade:
+    description: Player trade command
+  wartung:
+    description: Activates Maintanace mode
+    aliases:
+      - maintenance
+  repair:
+    description: Lets you repair an item
+  rename:
+    description: Lets you rename an item (You can use & color codes)
+  stop:
+    description: Lets you stop the server
+  plugin:
+    description: Lets you see witch plugins are on the Server
+    aliases:
+      - pl
+  freeze:
+    description: Lets you freeze yourself or someone else
+    aliases:
+      - setworldspawn
+  unfreeze:
+    description: Well Unfreeze a player or self
+  setspawn:
+    description: Sets the world spawn to your current location
+  spawn:
+    description: Sends you or someone else to the spawn
+  regeln:
+    description: Show the Servers Rules
+  rules:
+    description: Show the Servers Rules
+  gamemode:
+    description: Gamemode Changer
+    aliases:
+      - gm
+  heal:
+    description: Heals people
+  healall:
+    description: Heile alle auf dem Server
+  weather:
+    description: weather Changer
+  reload:
+    description: Server Reload Command
+    aliases:
+      - rl
+  tps:
+    description: Tells TPS
+  time:
+    description: Time Changer and adder
+  day:
+    description: Changes the time to DAY
+  night:
+    description: Changes the time to NIGHT
+  noon:
+    description: Changes the time to NOON
+  midnight:
+    description: Changes the time to MIDNIGHT
+  kick:
+    description: player kicker
+  kickall:
+    description: kicks all players but you
+  ban:
+    description: Rewritten Ban Command
+  op:
+    description: Rewritten Op command
+  deop:
+    description: Rewritten Deop command
+  fly:
+    description: Makes You Flight
+  vanish:
+    description: Nakes you Invisible
+    aliases:
+      - v
+  test:
+    description: A quick dc embed test
