@@ -3,6 +3,10 @@ version: '${project.version}'
 main: de.lukas.systemplugin.Main
 api-version: 1.19
 commands:
+  giveall:
+    description: With the right permissions you can give an item to every player on the server!
+  tell:
+    description: Use plugins msg stuff.
   msg:
     description: Lets you Privately message a player
   ping:

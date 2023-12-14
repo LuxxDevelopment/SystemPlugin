@@ -29,6 +29,7 @@ Commands:
 	- /rename			  	  | Allows you to rename your or someone elses Item
 	- /repair			  	  | Allows you to repair your or someoneelses tools / items
 	- /trade				  | Lets you trade with other people args: /trade (request/accept) <playername>
+	- /msg or /tell			  | Private messages (disable /tell)
 
 Listeners:
 	- Join Message			  | Set the join message
@@ -54,7 +55,6 @@ TODO:
 	- /kit					  | Shows the player a menu (Inventory) to chose a kit
 	- /createkit			  | Shows the player a menu (Inventory) to create a kit
 	- /renamekit			  | Shows the player a menu (Inventory) to rename a kit
-	- /msg or /r 			  | Private messages (disable /tell)
 	- /tp and /rtp		  	  | Rewamp of /tp command and adds /rtp (random teleport)
 	- /wild 			 	  | Teleports the player or target into the wilderness (smp)
 	- /chunkclaim		 	  | Allows a player to claim a chuck (Others unless trusted cant build break or open chests)
@@ -71,6 +71,7 @@ TODO:
 	- add money               | Add an indikator to the scoreboard
 	- /clearchat			  | Lets you clear you or anyotherplayers chat (Also works for everyone)
 	- Command optimises       | Make most of the commands relay on a utils class so everything is need and tidy xD
+	- /giveall                | Give the item you are currently holding to every player online
 
 Issues:
     - Trade system            | does not cancel on INV Close
@@ -98,7 +99,9 @@ Permissions:
 		- wartung
 		- pl
 		- repair
-		- give
+		- give.self
+		- give.others
+		- give.all
 		- enchant.normal
 		- enchant.all
 		- rename.self

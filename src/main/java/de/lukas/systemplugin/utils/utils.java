@@ -35,6 +35,7 @@ public class utils {
         Player t = Bukkit.getPlayer(targetPlayerName);
         if(t == null){
             sender.sendMessage(Main.getPrefix() + "Der spieler §c" + targetPlayerName + "§7 ist gerade offline.");
+            return null;
         }
         return t;
     }
