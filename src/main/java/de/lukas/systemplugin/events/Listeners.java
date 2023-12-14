@@ -12,10 +12,7 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityRegainHealthEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.event.player.AsyncPlayerChatEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.event.player.*;
 import org.bukkit.event.server.ServerListPingEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -23,14 +20,15 @@ public class Listeners implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
-        if(Main.wartung && !(e.getPlayer().hasPermission("system.wartung.join")))
-        {
-        } else if (Main.wartung && e.getPlayer().hasPermission("system.wartung.join")){
-
+        if(Main.wartung && !e.getPlayer().hasPermission("system.staff.bypass.wartung")){
+            e.getPlayer().kickPlayer(Main.getPrefix() + "\nDer Server ist zurzeit in wartungsarbeiten!");
+            return;
+        } else {
+            e.setJoinMessage(Main.getPrefix() + "§a" + e.getPlayer().getName() + " §7has just joined the Server");
+            e.getPlayer().setScoreboard(ScoreboardUtlis.getBaseScoreboard(e.getPlayer()));
         }
-        e.setJoinMessage(Main.getPrefix() + "§a" +e.getPlayer().getName() + " §7has just joined the Server");
-        e.getPlayer().setScoreboard(ScoreboardUtlis.getBaseScoreboard(e.getPlayer()));
     }
+
 
     @EventHandler
     public void onDisconnect(PlayerQuitEvent e) {
@@ -120,10 +118,10 @@ public class Listeners implements Listener {
 
     @EventHandler
     public void ServerPing(ServerListPingEvent e) {
-        if(Main.wartung){
+        if(!Main.wartung){
             e.setMotd("§d   §m§l--§5§l§m-§8§m§l]-§r §c§lRabitcraft§r§8 ︳§r §fOnline Mode §8§l§m-[§5§l§m-§d§l§m--§r\n         §c§lUPDATE §r§8▸ §r§fThe server is §a§nonline§r§f.");
-        } else {
-            e.setMotd("§7------------------§cWARTUNG§7-------------------"); // §aONLINE
+        } else if (Main.wartung) {
+            e.setMotd("§7------------------§cWARTUNG§7-------------------"); // Wartung
         }
     }
 

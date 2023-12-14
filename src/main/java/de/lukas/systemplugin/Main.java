@@ -7,6 +7,7 @@ import de.lukas.systemplugin.events.TradeListeners;
 import de.lukas.systemplugin.events.TrollListeners;
 import de.lukas.systemplugin.utils.DiscordWebhook;
 import de.lukas.systemplugin.utils.FileManager;
+import de.lukas.systemplugin.utils.utils;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -75,12 +76,12 @@ public final class Main extends JavaPlugin {
         url = config.getString("url");
         adm_webhook_username = config.getString("adm_webhook_username");
         scrt = config.getString("auth_secret");
-        wartung = config.getBoolean("wartung");
         swear_words = (ArrayList<String>) config.getList("words");
         instance = this;
         getLogger().info("System Plugin Active");
 
         TradeListeners trader = new TradeListeners();
+        utils.CreateWartungConfig();
         Bukkit.getPluginManager().registerEvents(new Listeners(), this);
         Bukkit.getPluginManager().registerEvents(new ChatListener(), this);
         Bukkit.getPluginManager().registerEvents(trader, this);
