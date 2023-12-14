@@ -4,13 +4,13 @@ main: de.lukas.systemplugin.Main
 api-version: 1.19
 commands:
   msg:
-    description: Lets you Privatly message a player
+    description: Lets you Privately message a player
   ping:
-    description: Lets you easliy check someone elses ping
+    description: Lets you easily check someone elses ping
   trade:
     description: Player trade command
   wartung:
-    description: Activates Maintanace mode
+    description: Activates Maintenance mode
     aliases:
       - maintenance
   repair:
