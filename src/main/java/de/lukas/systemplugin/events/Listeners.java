@@ -34,7 +34,7 @@ public class Listeners implements Listener {
     public void onDisconnect(PlayerQuitEvent e) {
         e.setQuitMessage(Main.getPrefix() + "§c" +e.getPlayer().getName() + " §7has left the Server");
     }
-    
+
     @EventHandler
     public void onInvClick(InventoryClickEvent e) {
         if (e.getCurrentItem() == null) return;
