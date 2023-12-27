@@ -17,7 +17,6 @@ Commands:
 	- /feed and /feedall	  | Set the hunger of you and or all players to full
 	- /fly					  | Enabels fly mode for the Target
 	- /gamemode				  | Rewamped gamemode or /gm command
-	- /ban					  | Ban a player
 	- /weather 				  | A weather command (clear; rain; thunder)
 	- /vanish 				  | Hides you from other players
 	- /spawn				  | Teleports you or the target player to the world spawn
@@ -30,6 +29,7 @@ Commands:
 	- /repair			  	  | Allows you to repair your or someoneelses tools / items
 	- /trade				  | Lets you trade with other people args: /trade (request/accept) <playername>
 	- /msg or /tell			  | Private messages (disable /tell)
+	- /ping <playername>      | Get the ping of you or a specific player
 
 Listeners:
 	- Join Message			  | Set the join message
@@ -44,7 +44,10 @@ Admin Listeners:
 	- enchant				  | Enchant command without an Enchant ment cap (Max Level is 255)
 
 TODO:
-    - /ping <playername>      | Get the ping of you or a specific player
+    - /chaton                 | Enabels the chat if disabled
+    - /chatoff                | Chat does not display any player messages but staff
+    - /ban 					  | Sieh bann UI
+    - /banlist                | Siehe ban list
 	- /ah					  | Opens the Auctionhouse when a specific level is reached
 	- /lobby				  | Teleports the player Onto the lobby server
 	- chestlock System		  | Locks chests when a sign with a specific text is placed on it
@@ -72,6 +75,18 @@ TODO:
 	- /clearchat			  | Lets you clear you or anyotherplayers chat (Also works for everyone)
 	- Command optimises       | Make most of the commands relay on a utils class so everything is need and tidy xD
 	- /giveall                | Give the item you are currently holding to every player online
+	- /nick                   | Lets you nick yourself
+
+Ban ui:
+    Ban a player for a reason (May be in the list) use /ban <playername> [Reason # for out of list] [Witch server * or none for all]
+    Inventory (reason selector / Server Selector)
+
+    Stone_Slap = City Build
+    Grass_Block = SMP
+    Barrier = All
+
+BAN / KICK reason list:
+    - A list with Reasons
 
 Issues:
     - Trade system            | does not cancel on INV Close

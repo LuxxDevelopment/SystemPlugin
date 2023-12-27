@@ -42,8 +42,6 @@ public class utils {
         } catch (IOException | InvalidConfigurationException e) {
             throw new RuntimeException(e);
         }
-
-
     }
 
     public static boolean senderInstanceCheck(CommandSender sender, String noPlayerMessage){
