@@ -76,6 +76,8 @@ TODO:
 	- Command optimises       | Make most of the commands relay on a utils class so everything is need and tidy xD
 	- /giveall                | Give the item you are currently holding to every player online
 	- /nick                   | Lets you nick yourself
+	- /farbe oder /color      | Get a list of color codes
+	- /
 
 Ban ui:
     Ban a player for a reason (May be in the list) use /ban <playername> [Reason # for out of list] [Witch server * or none for all]
