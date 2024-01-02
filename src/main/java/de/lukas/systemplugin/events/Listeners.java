@@ -36,6 +36,14 @@ public class Listeners implements Listener {
     }
 
     @EventHandler
+    public void onPlayerChat(AsyncPlayerChatEvent e){
+        if(FreezeCommand.freezed.contains(e.getPlayer())){
+            e.getPlayer().sendMessage(Main.getPrefix() + "Du bist gefreezed und kannst nicht schrieben!");
+            e.setCancelled(true);
+        }
+    }
+
+    @EventHandler
     public void onInvClick(InventoryClickEvent e) {
         if (e.getCurrentItem() == null) return;
         if (e.getView().getTitle() == "§7Player Managment") {
@@ -114,7 +122,7 @@ public class Listeners implements Listener {
     @EventHandler
     public void ServerPing(ServerListPingEvent e) {
         if(!Main.wartung){
-            e.setMotd("§d   §m§l--§5§l§m-§8§m§l]-§r §c§lRabitcraft§r§8 ︳§r §fOnline Mode §8§l§m-[§5§l§m-§d§l§m--§r\n         §c§lUPDATE §r§8▸ §r§fThe server is §a§nonline§r§f.");
+            e.setMotd("§d   §m§l--§5§l§m-§8§m§l]-§r §c§lRabbitCraft§r§8 ︳§r §fOnline Mode §8§l§m-[§5§l§m-§d§l§m--§r\n         §c§lUPDATE §r§8▸ §r§fThe server is §a§nonline§r§f.");
         } else if (Main.wartung) {
             e.setMotd("§7------------------§cWARTUNG§7-------------------"); // Wartung
         }
@@ -124,6 +132,9 @@ public class Listeners implements Listener {
     public void onMove(PlayerMoveEvent e) {
         if (FreezeCommand.freezed.contains(e.getPlayer())){
             e.setCancelled(true);
+            if(e.getPlayer().isFlying()){
+                e.getPlayer().setFlying(true);
+            }
             e.getPlayer().sendMessage(Main.getPrefix() + "Du kannst dich zurzeit §cnicht§7 bewegen");
         }
     }

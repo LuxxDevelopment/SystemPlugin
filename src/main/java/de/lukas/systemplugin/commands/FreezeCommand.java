@@ -28,7 +28,8 @@ public class FreezeCommand implements CommandExecutor {
                 sender.sendMessage(Main.getPrefix() + "Du hast dich aufgetaut");
             } else {
                 freezed.add(p);
-                sender.sendMessage(Main.getPrefix() + "Du bist $cangefrohren");
+                if(p.isFlying()){p.setFlying(true);}
+                sender.sendMessage(Main.getPrefix() + "Du bist §cangefrohren");
             }
         } else if (args.length == 1) {
             if(!sender.hasPermission("system.staff.run.system.freeze.other")) {
@@ -47,6 +48,7 @@ public class FreezeCommand implements CommandExecutor {
                 t.sendMessage(Main.getPrefix() + "Du wurdest von §a" + sender.getName() + "§7 aufgetaut");
             } else {
                 freezed.add(t);
+                if(t.isFlying()){t.setFlying(true);}
                 sender.sendMessage(Main.getPrefix() + "Du hast §a" + t.getName() + "§7 eingefroren");
                 t.sendMessage(Main.getPrefix() + "Du wurdest von §a" + sender.getName() + "§7 eingefroren");
             }

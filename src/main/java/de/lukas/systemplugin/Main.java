@@ -122,6 +122,7 @@ public final class Main extends JavaPlugin {
         getCommand("msg").setExecutor(new Msg_Command());
         getCommand("tell").setExecutor(new TellCommand());
         getCommand("giveall").setExecutor(new GiveAllCommand());
+        getCommand("verify").setExecutor(new VerifyCommand());
     }
 
     @Override

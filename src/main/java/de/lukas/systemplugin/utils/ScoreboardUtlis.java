@@ -24,11 +24,11 @@ public class ScoreboardUtlis {
 
         Team t = s.registerNewTeam("leben");
         t.addEntry(ChatColor.AQUA + "" + ChatColor.RED);
-        objective.getScore(ChatColor.AQUA + "" + ChatColor.RED).setScore(2);
+        objective.getScore(ChatColor.AQUA + "" + ChatColor.RED).setScore(3);
 
         Team x = s.registerNewTeam("money");
-        x.addEntry(ChatColor.AQUA + "" + ChatColor.RED);
-        objective.getScore(ChatColor.AQUA + "" + ChatColor.RED).setScore(8);
+        x.addEntry(ChatColor.AQUA + "NONE" + ChatColor.RED);
+        objective.getScore(ChatColor.AQUA + "NONE" + ChatColor.RED).setScore(8);
 
         x.setPrefix("§a" + Math.round(player.getHealth() * 100) / 100);
         //-                    9

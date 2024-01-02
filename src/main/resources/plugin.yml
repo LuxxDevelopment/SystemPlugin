@@ -3,6 +3,8 @@ version: '${project.version}'
 main: de.lukas.systemplugin.Main
 api-version: 1.19
 commands:
+  verify:
+    description: Generates A Verify Code that Can be used to Verify Your Discord account
   giveall:
     description: With the right permissions you can give an item to every player on the server!
   tell:

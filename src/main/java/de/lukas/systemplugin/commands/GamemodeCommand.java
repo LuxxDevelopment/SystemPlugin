@@ -33,9 +33,9 @@ public class GamemodeCommand implements CommandExecutor {
                 } else if (args[0].equalsIgnoreCase("0")){
                     gamemodeSwtich(p, SURVIVAL);
                 } else if (args[0].equalsIgnoreCase("2")){
-                    gamemodeSwtich(p, SPECTATOR);
-                } else if (args[0].equalsIgnoreCase("3")){
                     gamemodeSwtich(p, ADVENTURE);
+                } else if (args[0].equalsIgnoreCase("3")){
+                    gamemodeSwtich(p, SPECTATOR);
                 }
             }
         } else if (args.length == 2) {
@@ -54,9 +54,9 @@ public class GamemodeCommand implements CommandExecutor {
                 } else if(args[0].equalsIgnoreCase("1")){
                     targetgamemodeSwitch(p,target , CREATIVE);
                 } else if(args[0].equalsIgnoreCase("2")){
-                    targetgamemodeSwitch(p,target , SPECTATOR);
-                } else if(args[0].equalsIgnoreCase("3")){
                     targetgamemodeSwitch(p,target , ADVENTURE);
+                } else if(args[0].equalsIgnoreCase("3")){
+                    targetgamemodeSwitch(p,target , SPECTATOR);
                 }
             }
         }
