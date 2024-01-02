@@ -1,6 +1,10 @@
 package de.lukas.systemplugin.utils;
 
 import de.lukas.systemplugin.Main;
+import net.md_5.bungee.api.chat.BaseComponent;
+import net.md_5.bungee.api.chat.ClickEvent;
+import net.md_5.bungee.api.chat.ComponentBuilder;
+import net.md_5.bungee.api.chat.HoverEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -10,6 +14,7 @@ import org.bukkit.entity.Player;
 import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
+import java.util.Random;
 
 public class utils {
 
@@ -83,5 +88,32 @@ public class utils {
         return Objects.requireNonNull(sender.getServer().getPlayer(targetPlayer.getName())).getPing();
     }
 
+    public static void sendCopiableText(CommandSender player, String text, String code) {
+        BaseComponent[] baseComponents = new ComponentBuilder(text)
+                .event(new ClickEvent(ClickEvent.Action.COPY_TO_CLIPBOARD, code))
+                .event(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder("Klicke um deinen Code Zu Kopieren!").create()))
+                .create();
 
+        player.spigot().sendMessage(baseComponents);
+    }
+
+    public static String generateRandomPassword(int length) {
+        String characters = "0123456789";
+        StringBuilder password = new StringBuilder();
+
+        for (int i = 0; i < length; i++) {
+            // Generate a random number using Random() class
+            Random random = new Random();
+
+            // Select a random character from the list of characters
+            int randomIndex = random.nextInt(characters.length());
+            char randomCharacter = characters.charAt(randomIndex);
+
+            // Append the randomly selected character to the password
+            password.append(randomCharacter);
+        }
+
+        // Return the generated password
+        return password.toString();
+    }
 }
