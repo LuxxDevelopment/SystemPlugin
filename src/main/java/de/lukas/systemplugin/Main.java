@@ -64,7 +64,7 @@ public final class Main extends JavaPlugin {
             // Register the TrollListeners event listener
             Bukkit.getPluginManager().registerEvents(new TrollListeners(), this);
         } else if (!config.getBoolean("acceptCopyright")) {
-            getLogger().info("Copyright (c) 2023 Lukas Koch\n\n" +
+            getLogger().info("Copyright (c) 2024 Lukas Koch\n\n" +
                     "Permission is hereby granted, free of charge, to any person obtaining a copy of this Minecraft plugin and associated documentation files (the \"Plugin\"), to use the Plugin, subject to the following conditions:\n\n" +
                     "1. The Plugin may not be sold or resold, or otherwise used for commercial purposes.\n" +
                     "2. The Plugin may not be misrepresented as being created by anyone other than the copyright holder.\n\n" +
